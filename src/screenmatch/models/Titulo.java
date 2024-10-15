@@ -9,12 +9,21 @@ public class Titulo {
     private int totalDeAvaliacoes;
     private int duracaoEmMinutos;
 
+    public Titulo(String titulo, int anoDeLancamento) {
+        this.titulo = titulo;
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
     public String getTitulo() {
         return titulo;
     }
 
     public String getSinopse() {
         return sinopse;
+    }
+
+    public int getAnoDeLancamento() {
+        return anoDeLancamento;
     }
 
     public boolean isIncluidoNoPlano() {
