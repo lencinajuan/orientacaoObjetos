@@ -5,9 +5,8 @@ import screenmatch.calculo.Classificavel;
 public class Filme extends Titulo implements Classificavel {
     private String diretor;
 
-     public Filme(String titulo, int anoDeLancamento) {
-        this.setTitulo(titulo);
-        this.setAnoDeLancamento(anoDeLancamento);
+    public Filme(String titulo, int anoDeLancamento, String sinopse, int duracaoEmMinutos, boolean incluidoNoPlano, int totalDeAvaliacoes){
+        super(titulo, anoDeLancamento, sinopse, duracaoEmMinutos, incluidoNoPlano, totalDeAvaliacoes);
     }
 
     public String getDiretor(){
@@ -25,6 +24,6 @@ public class Filme extends Titulo implements Classificavel {
 
     @Override
     public String toString() {
-        return "Filme: " + this.getTitulo() + " (" + this.getAnoDeLancamento() + ")";
+        return "Filme: " + this.getTitulo() + " (" + this.getAnoDeLancamento() + ")" + " Sinopse: " + this.getSinopse() + " Tempo de duração (minutos): " + this.getDuracaoEmMinutos();
     }
 }

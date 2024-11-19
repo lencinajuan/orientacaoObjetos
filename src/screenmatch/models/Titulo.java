@@ -9,9 +9,13 @@ public class Titulo {
     private int totalDeAvaliacoes;
     private int duracaoEmMinutos;
 
-    public Titulo(String titulo, int anoDeLancamento) {
+    public Titulo(String titulo, int anoDeLancamento, String sinopse, int duracaoEmMinutos, boolean incluidoNoPlano, int totalDeAvaliacoes) {
         this.titulo = titulo;
         this.anoDeLancamento = anoDeLancamento;
+        this.sinopse = sinopse;
+        this.duracaoEmMinutos = duracaoEmMinutos;
+        this.incluidoNoPlano = incluidoNoPlano;
+        this.totalDeAvaliacoes = totalDeAvaliacoes;
     }
 
     public String getTitulo() {
@@ -66,7 +70,7 @@ public class Titulo {
     }
 
     public double obterMedia(){
-        return somaDasAvaliacoes / totalDeAvaliacoes;
+        return somaDasAvaliacoes + totalDeAvaliacoes;
     }
 
     public int getDuracaoEmMinutos() {

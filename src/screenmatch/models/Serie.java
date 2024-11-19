@@ -6,8 +6,8 @@ public class Serie extends Titulo{
     private int episodiosPorTemporada;
     private int minutosPorEpisodio;
 
-    public Serie(String titulo, int anoDeLancamento) {
-        super(titulo, anoDeLancamento);
+    public Serie(String titulo, int anoDeLancamento, String sinopse, int duracaoEmMinutos, boolean incluidoNoPlano, int totalDeAvaliacoes) {
+        super(titulo, anoDeLancamento, sinopse, duracaoEmMinutos, incluidoNoPlano, totalDeAvaliacoes);
     }
 
     public int getTemporadas() {

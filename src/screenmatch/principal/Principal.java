@@ -1,3 +1,5 @@
+package screenmatch.principal;
+
 import screenmatch.calculo.CalculadoraDeTempo;
 import screenmatch.calculo.FiltroRecomendacao;
 import screenmatch.models.Episodio;
@@ -8,17 +10,17 @@ import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Filme meuFilme = new Filme("Velozes e Furiosos", 2005);
+        Filme meuFilme = new Filme("Velozes e Furiosos", 2005, "Corrida de carros tunados maneiros", 120, true, 10);
         //meuFilme.setTitulo("Velozes e Furiosos");
         //meuFilme.setSinopse("Corrida de carros tunados maneiros");
-        meuFilme.setAnoDeLancamento(2005);
-        meuFilme.setDuracaoEmMinutos(120);
+        //meuFilme.setAnoDeLancamento(2005);
+        //meuFilme.setDuracaoEmMinutos(120);
 
-        Filme outroFilme = new Filme("Velozes e Furiosos 2", 2006);
+        Filme outroFilme = new Filme("Velozes e Furiosos 2", 2006, "Corrida de carros tunados maneiros (de novo)", 140, true, 10);
         //outroFilme.setTitulo("Velozes e Furiosos 2");
         //outroFilme.setSinopse("Corrida de carros tunados maneiros (de novo)");
-        outroFilme.setAnoDeLancamento(2006);
-        outroFilme.setDuracaoEmMinutos(140);
+        //outroFilme.setAnoDeLancamento(2006);
+        //outroFilme.setDuracaoEmMinutos(140);
 
         meuFilme.exibeFichaTecnica();
         meuFilme.avalia(8);
@@ -28,7 +30,7 @@ public class Principal {
         System.out.println("Soma das avaliações: " + meuFilme.getSomaDasAvaliacoes());
         System.out.println("Total de avaliações: " + meuFilme.getTotalDeAvaliacoes());
 
-        Serie lost = new Serie("Lost", 2000);
+        Serie lost = new Serie("Lost", 2000, "Tão tudo perdido no mato", 5000, true, 10);
         lost.exibeFichaTecnica();
         lost.setTemporadas(10);
         lost.setEpisodiosPorTemporada(10);
@@ -50,11 +52,11 @@ public class Principal {
         episodio.setTotalVisualizacoes(400);
         filtro.filtraRecomendacao(episodio);
 
-        Filme maisFilme = new Filme("Velozes e Furiosos 3", 2007);
-        maisFilme.setDuracaoEmMinutos(130);
+        Filme maisFilme = new Filme("Velozes e Furiosos 3", 2007, "Corrida de carros tunados e legais (de novo novamente)", 130, true, 10);
+        //maisFilme.setDuracaoEmMinutos(130);
         //maisFilme.setTitulo("Velozes e Furiosos 3");
         //maisFilme.setAnoDeLancamento(2007);
-        maisFilme.setSinopse("Corrida de carros tunados e legais (de novo novamente)");
+        //maisFilme.setSinopse("Corrida de carros tunados e legais (de novo novamente)");
         maisFilme.avalia(10);
 
         ArrayList<Filme> listaDeFilmes = new ArrayList<>();
